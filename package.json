@@ -1,0 +1,19 @@
+{
+  "name": "my_blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^1.9.10"
+  },
+  "dependencies": {
+    "vue": "^2.7.16",
+    "vue-template-compiler": "^2.7.16"
+  }
+}
