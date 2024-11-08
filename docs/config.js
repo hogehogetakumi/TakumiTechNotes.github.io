@@ -10,7 +10,7 @@ module.exports = {
         '/',
         '/about/',
         '/posts/first-post',
-        '/posts/options_composition'
+        '/posts/options-vs-composition-api'
       ]
     }
   }
