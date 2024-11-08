@@ -4,4 +4,9 @@ date: 2024-11-07
 ---
 # Welcome to My First Blog Post
 
-vuepressでブログテスト
+vuepressでバーナー作成
+めちゃ簡単
+
+
+<AffiliateBanner />
+
