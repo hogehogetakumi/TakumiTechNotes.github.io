@@ -9,7 +9,8 @@ module.exports = {
       sidebar: [
         '/',
         '/about/',
-        '/posts/first-post'
+        '/posts/first-post',
+        '/posts/options_composition'
       ]
     }
   }
