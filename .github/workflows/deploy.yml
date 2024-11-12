@@ -4,7 +4,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 変更をプッシュするとデプロイされるブランチ
+      - gh-pages  # 変更をプッシュするとデプロイされるブランチ
 
 jobs:
   deploy:
