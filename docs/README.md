@@ -44,11 +44,11 @@ export default {
 };
 </script>
 
-
+<template>
 <div class="articles">
   <ArticleCard v-for="(article, index) in articles" :key="index" :article="article" />
 </div>
-
+</template>
 <style scoped>
 .articles {
   display: flex;
