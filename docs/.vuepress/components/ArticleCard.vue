@@ -4,7 +4,7 @@
       <h3><a :href="article.link">{{ article.title }}</a></h3>
       <p>{{ article.description }}</p>
     </div>
-  </template>
+</template>
   
   <script>
   export default {
