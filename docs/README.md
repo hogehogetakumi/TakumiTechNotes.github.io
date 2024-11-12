@@ -44,9 +44,6 @@ export default {
 };
 </script>
 
----
-layout: Layout
----
 
 <div class="articles">
   <ArticleCard v-for="(article, index) in articles" :key="index" :article="article" />
