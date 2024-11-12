@@ -7,7 +7,11 @@
 - [IT技術関連の記事はこちら](./posts/Tech/)
 - [転職・副業関連はこちら](./posts/Job/) -->
 
-
+<template>
+<div class="articles">
+  <ArticleCard v-for="(article, index) in articles" :key="index" :article="article" />
+</div>
+</template>
 <script>
 import ArticleCard from './.vuepress/components/ArticleCard.vue';
 
@@ -44,11 +48,6 @@ export default {
 };
 </script>
 
-<template>
-<div class="articles">
-  <ArticleCard v-for="(article, index) in articles" :key="index" :article="article" />
-</div>
-</template>
 <style scoped>
 .articles {
   display: flex;
