@@ -12,6 +12,7 @@
   <ArticleCard v-for="(article, index) in articles" :key="index" :article="article" />
 </div>
 </template>
+
 <script>
 import ArticleCard from './.vuepress/components/ArticleCard.vue';
 
