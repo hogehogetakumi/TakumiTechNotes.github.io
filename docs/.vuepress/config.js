@@ -1,6 +1,7 @@
 const sidebar = require('./sidebar.js'); // sidebar.jsの読み込み
 
 module.exports = {
+  base: '/TakumiTechNotes.github.io/',
   title: 'TechNotes',
   description: 'Welcome to my blog',
   themeConfig: {
