@@ -2,7 +2,7 @@
 
 Vue 3の登場により、Vueには新しい記述方法であるComposition APIが追加されました。これまで使われてきたOptions APIと比較して、どのように違うのかを解説します。
 
-## Options APIの特徴
+## Options API
 
 - **dataオプション内でデータを定義**  
   データは`data`オプションでまとめて管理し、初期値を設定します。

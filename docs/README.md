@@ -1,20 +1,57 @@
-# はじめまして
+# おすすめ記事
 
-当ブログをご覧いただきありがとうございます！
+アウトプット用にIT技術とキャリア関連の記事を掲載しています。
 
-私はエンジニアとして成長を目指し、日々学んでいる内容をここでアウトプットしています。現在、**プログラミングや最新技術の習得**に励んでおり、Vue.jsやPythonを使った開発経験があり、バックエンドとフロントエンドの両方で実務を積んでいます。
+<!-- ## カテゴリ一覧
 
-## 学習中の内容と開発経験
+- [IT技術関連の記事はこちら](./posts/Tech/)
+- [転職・副業関連はこちら](./posts/Job/) -->
 
-- **使用技術**: Vue.js、Python、GAS
-- **経験領域**: フロントエンド、バックエンド
 
-## フリーランス活動の挑戦
+<script>
+import ArticleCard from './.vuepress/components/ArticleCard.vue';
 
-まだ案件が取れたわけではないですが、その過程で得た気づきや実際の経験も記事にしています。これらの経験を通して得た知識を共有することで、皆さんの参考になればと考えています。
+export default {
+  components: {
+    ArticleCard,
+  },
+  data() {
+    return {
+      articles: [
+        {
+          title: "ライフサイクルフックbeforeCreate編",
+          link: "/posts/Tech/lifecycle_hook/beforeCreate",
+          description: "継続的インテグレーションについての基礎知識。",
+        },
+        {
+          title: "ライフサイクルフックcreated編",
+          link: "/posts/Tech/lifecycle_hook/created",
+          description: "継続的インテグレーションについての基礎知識。",
+        },
+        {
+          title: "Options APIとComposition APIの比較",
+          link: "/posts/Tech/options-vs-composition-api",
+          description: "Vue.jsのOptions APIとComposition APIを比較します。",
+        },
+        {
+          title: "初めての投稿",
+          link: "/posts/first-post",
+          description: "私の最初の投稿です。",
+        },
+      ],
+    };
+  },
+};
+</script>
 
-## 目標と想い
+<div class="articles">
+  <ArticleCard v-for="(article, index) in articles" :key="index" :article="article" />
+</div>
 
-このブログは、私自身の学びを深めると同時に、**同じようにエンジニアを目指す方々へのサポート**になればと考えています。
-
-どうぞよろしくお願いいたします！
+<style scoped>
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+</style>
