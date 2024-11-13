@@ -1,4 +1,4 @@
-const sidebar = require('./sidebar.js'); // sidebar.jsの読み込み
+import {sidebar} from './sidebar.js'; // sidebar.jsの読み込み
 import { path } from '@vuepress/utils';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 
