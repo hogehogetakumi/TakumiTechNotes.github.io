@@ -11,8 +11,9 @@
     "deploy": "push-dir --dir=docs/.vuepress/dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
-    "vuepress": "^1.9.10",
-    "push-dir": "^0.4.1"
+    "@vuepress/utils": "^2.0.0-rc.2",
+    "push-dir": "^0.4.1",
+    "vuepress": "^1.9.10"
   },
   "dependencies": {
     "vue": "^2.7.16",
