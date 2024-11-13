@@ -1,6 +1,6 @@
 const sidebar = require('./sidebar.js'); // sidebar.jsの読み込み
-const { registerComponentsPlugin } = require('@vuepress/plugin-register-components');
-const { path } = require('@vuepress/utils');
+import { path } from '@vuepress/utils';
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 
 module.exports = {
   base: '/TakumiTechNotes.github.io/',
