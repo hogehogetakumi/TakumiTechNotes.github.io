@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: cache-node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-v2
+
     - name: Checkout
       uses: actions/checkout@v4
 
