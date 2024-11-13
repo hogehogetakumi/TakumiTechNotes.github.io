@@ -3,6 +3,9 @@ const sidebar = require('./sidebar.js'); // sidebar.jsの読み込み
 module.exports = {
   base: '/TakumiTechNotes.github.io/',
   title: 'TechNotes',
+  plugins: [
+    registerComponentsPlugin({ componentsDir: path.resolve(__dirname, './components/') }),
+  ],
   description: 'Welcome to my blog',
   themeConfig: {
     nav: [
