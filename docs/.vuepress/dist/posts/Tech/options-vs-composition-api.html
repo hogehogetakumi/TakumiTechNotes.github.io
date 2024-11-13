@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue.jsにおけるOptions APIとComposition APIの違い | TechNotes</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Welcome to my blog">
+    
+    <link rel="preload" href="/TakumiTechNotes.github.io/assets/css/0.styles.1d245f49.css" as="style"><link rel="preload" href="/TakumiTechNotes.github.io/assets/js/app.0ab34e02.js" as="script"><link rel="preload" href="/TakumiTechNotes.github.io/assets/js/2.cf60bc81.js" as="script"><link rel="preload" href="/TakumiTechNotes.github.io/assets/js/1.c29df309.js" as="script"><link rel="preload" href="/TakumiTechNotes.github.io/assets/js/31.6656dc6d.js" as="script"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/11.e45fed0f.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/12.f089dd4e.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/13.18f59c98.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/14.2624cbb4.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/15.e445b4cd.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/16.58649a0a.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/17.cedfe6e1.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/18.0b0b643c.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/19.90dfced6.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/20.aaca324f.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/21.7da3bc21.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/22.8202214f.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/23.6432b150.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/24.7a8b809d.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/25.c31744ca.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/26.db799193.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/27.a870274f.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/28.5f8fea28.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/29.5cf776b2.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/3.118e94e1.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/30.21cc93d8.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/32.f5640499.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/4.d4a0ef5f.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/5.c70e4d44.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/6.a49ec4fa.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/7.1fcd0d79.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/8.0ebb5a53.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/vendors~docsearch.c43adb31.js">
+    <link rel="stylesheet" href="/TakumiTechNotes.github.io/assets/css/0.styles.1d245f49.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TakumiTechNotes.github.io/" class="home-link router-link-active"><!----> <span class="site-name">TechNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/TakumiTechNotes.github.io/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TakumiTechNotes.github.io/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/TakumiTechNotes.github.io/posts/" class="nav-link router-link-active">
+  Posts
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/TakumiTechNotes.github.io/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TakumiTechNotes.github.io/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/TakumiTechNotes.github.io/posts/" class="nav-link router-link-active">
+  Posts
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/TakumiTechNotes.github.io/posts/Tech/" aria-current="page" class="sidebar-link">sample</a></li><li><a href="/TakumiTechNotes.github.io/posts/Tech/options-vs-composition-api.html" aria-current="page" class="active sidebar-link">Vue.jsにおけるOptions APIとComposition APIの違い</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/TakumiTechNotes.github.io/posts/Tech/options-vs-composition-api.html#options-api" class="sidebar-link">Options API</a></li><li class="sidebar-sub-header"><a href="/TakumiTechNotes.github.io/posts/Tech/options-vs-composition-api.html#composition-apiの特徴" class="sidebar-link">Composition APIの特徴</a></li><li class="sidebar-sub-header"><a href="/TakumiTechNotes.github.io/posts/Tech/options-vs-composition-api.html#options-apiとcomposition-apiの違いまとめ" class="sidebar-link">Options APIとComposition APIの違いまとめ</a></li></ul></li><li><a href="/TakumiTechNotes.github.io/posts/Tech/lifecycle_hook/beforeCreate.html" class="sidebar-link">beforeCreate</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-jsにおけるoptions-apiとcomposition-apiの違い"><a href="#vue-jsにおけるoptions-apiとcomposition-apiの違い" class="header-anchor">#</a> Vue.jsにおけるOptions APIとComposition APIの違い</h1> <p>Vue 3の登場により、Vueには新しい記述方法であるComposition APIが追加されました。これまで使われてきたOptions APIと比較して、どのように違うのかを解説します。</p> <h2 id="options-api"><a href="#options-api" class="header-anchor">#</a> Options API</h2> <ul><li><p><strong>dataオプション内でデータを定義</strong><br>
+データは<code>data</code>オプションでまとめて管理し、初期値を設定します。</p></li> <li><p><strong>オプションごとに役割が分かれる</strong><br> <code>methods</code>、<code>computed</code>、<code>watch</code>、<code>created</code>、<code>mounted</code>などのオプションを用意し、それぞれの役割に応じた処理を記述します。各オプションで<code>data</code>で定義した変数を参照・更新できます。</p></li> <li><p><strong>コードが機能ごとに分離される</strong><br>
+データ、メソッド、ライフサイクルフック（<code>created</code>、<code>mounted</code>など）がオブジェクト形式で分かれて記述されるため、ある程度の規則性があり、Vueに慣れていれば読みやすい構成になっています。</p></li></ul> <h3 id="サンプルコード-options-api"><a href="#サンプルコード-options-api" class="header-anchor">#</a> サンプルコード (Options API)</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>{{ title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Current Count: {{ count }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>increment<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Increment<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>decrement<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Decrement<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'Vue 2 Options API Counter'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 初期化時に実行するロジックを記述</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// DOMがマウントされた後に実行するロジックを記述</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="説明"><a href="#説明" class="header-anchor">#</a> 説明</h3> <p>このように、<strong><code>data</code>オプションで定義したデータを<code>methods</code>やライフサイクルフック（<code>created</code>や<code>mounted</code>）で更新</strong>できます。各要素が独立してオブジェクト内に記述されるのが特徴です。</p> <h2 id="composition-apiの特徴"><a href="#composition-apiの特徴" class="header-anchor">#</a> Composition APIの特徴</h2> <ul><li><p><strong><code>setup</code>内でデータと関数を定義</strong><br> <code>setup</code>関数はコンポーネントが初期化される際に一度だけ呼び出され、ここでリアクティブなデータや関数を定義します。データとロジックを1つの場所に集約でき、柔軟に管理できます。</p></li> <li><p><strong>リアクティブなデータの定義</strong><br> <code>ref</code>や<code>reactive</code>を使ってリアクティブなデータを設定します。例えば、プリミティブな値には<code>ref</code>を、オブジェクトには<code>reactive</code>を使うのが一般的です。</p></li> <li><p><strong>関連するロジックをまとめて管理</strong><br>
+Options APIとは異なり、データとそれに関連するメソッドを同じスコープで管理できるため、特に複雑なコンポーネントでは見通しが良くなります。</p></li></ul> <h3 id="サンプルコード-composition-api"><a href="#サンプルコード-composition-api" class="header-anchor">#</a> サンプルコード (Composition API)</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>{{ title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Current Count: {{ count }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>increment<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Increment<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>decrement<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Decrement<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// リアクティブデータの初期化</span>
+    <span class="token keyword">const</span> title <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token string">'Vue 3 Composition API Counter'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// メソッドの定義</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">increment</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      count<span class="token punctuation">.</span>value <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">decrement</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      count<span class="token punctuation">.</span>value <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// `setup`で定義した変数を返すことで、テンプレートからアクセス可能に</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      title<span class="token punctuation">,</span>
+      count<span class="token punctuation">,</span>
+      increment<span class="token punctuation">,</span>
+      decrement
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="説明-2"><a href="#説明-2" class="header-anchor">#</a> 説明</h3> <p>Composition APIでは、<code>setup</code>関数内でデータとメソッドを定義し、テンプレートから直接利用可能にします。<code>ref</code>や<code>reactive</code>を使ってリアクティブデータを定義し、柔軟に構成できるのが特徴です。</p> <h2 id="options-apiとcomposition-apiの違いまとめ"><a href="#options-apiとcomposition-apiの違いまとめ" class="header-anchor">#</a> Options APIとComposition APIの違いまとめ</h2> <ul><li><strong>Options API</strong>: データとロジックがオプションごとに分かれて記述され、コードが機能別に整理される。</li> <li><strong>Composition API</strong>: 関連するデータとロジックを1つの<code>setup</code>関数内に集約し、より柔軟なコード設計が可能。</li></ul> <h3 id="まとめ"><a href="#まとめ" class="header-anchor">#</a> まとめ</h3> <p>Options APIは分かりやすく、Composition APIは柔軟です。用途やプロジェクトの規模に応じて適切なAPIを選択しましょう。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/TakumiTechNotes.github.io/posts/Tech/" class="prev router-link-active">
+        sample
+      </a></span> <span class="next"><a href="/TakumiTechNotes.github.io/posts/Tech/lifecycle_hook/beforeCreate.html">
+        beforeCreate
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/TakumiTechNotes.github.io/assets/js/app.0ab34e02.js" defer></script><script src="/TakumiTechNotes.github.io/assets/js/2.cf60bc81.js" defer></script><script src="/TakumiTechNotes.github.io/assets/js/1.c29df309.js" defer></script><script src="/TakumiTechNotes.github.io/assets/js/31.6656dc6d.js" defer></script>
+  </body>
+</html>
