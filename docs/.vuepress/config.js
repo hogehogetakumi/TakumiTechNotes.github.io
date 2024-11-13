@@ -16,9 +16,6 @@ module.exports = {
     sidebar: sidebar // sidebar.jsで定義したカスタムサイドバーを適用
   },
   plugins: [
-    registerComponentsPlugin({
-      componentsDir: path.resolve(__dirname, './components/')
-    }),
     '@vuepress/back-to-top',
     '@vuepress/medium-zoom'
   ],
