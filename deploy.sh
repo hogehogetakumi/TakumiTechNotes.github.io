@@ -3,6 +3,8 @@
 # エラー時に停止
 set -e
 
+npm install
+
 # ビルド
 npm run docs:build
 
