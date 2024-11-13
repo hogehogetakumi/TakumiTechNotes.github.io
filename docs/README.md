@@ -1,4 +1,5 @@
 ---
+permalink: /
 data:
   articles:
     - title: "ライフサイクルフックbeforeCreate編"
