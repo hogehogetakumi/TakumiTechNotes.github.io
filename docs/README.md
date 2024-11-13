@@ -25,8 +25,11 @@ data:
 - [IT技術関連の記事はこちら](./posts/Tech/)
 - [転職・副業関連はこちら](./posts/Job/) -->
 
-
-<ArticleCard v-for="(article, index) in $frontmatter.data.articles" :key="index" :article="article" />
+<template>
+  <div class="articles">
+    <ArticleCard v-for="(article, index) in $frontmatter.data.articles" :key="index" :article="article" />
+  </div>
+</template>
 
 <style scoped>
 .articles {
