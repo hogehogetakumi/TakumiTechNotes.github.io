@@ -1,13 +1,11 @@
-import {sidebar} from './sidebar.js'; // sidebar.jsの読み込み
-import { path } from '@vuepress/utils';
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+// config.js
+const { path } = require('path');
+const { registerComponentsPlugin } = require('@vuepress/plugin-register-components');
+const sidebar = require('./sidebar.js'); // sidebar.jsの読み込み
 
 module.exports = {
   base: '/TakumiTechNotes.github.io/',
   title: 'TechNotes',
-  plugins: [
-    registerComponentsPlugin({ componentsDir: path.resolve(__dirname, './components/') }),
-  ],
   description: 'Welcome to my blog',
   themeConfig: {
     nav: [
@@ -18,7 +16,10 @@ module.exports = {
     sidebar: sidebar // sidebar.jsで定義したカスタムサイドバーを適用
   },
   plugins: [
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components/')
+    }),
     '@vuepress/back-to-top',
     '@vuepress/medium-zoom'
-  ]
+  ],
 };

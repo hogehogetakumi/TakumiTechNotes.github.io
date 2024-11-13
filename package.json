@@ -1,7 +1,6 @@
 {
   "name": "my_blog",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
   "main": "index.js",
   "author": "",
@@ -12,7 +11,7 @@
     "deploy": "push-dir --dir=docs/.vuepress/dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
-    "@vuepress/utils": "^2.0.0-rc.2",
+    "@vuepress/plugin-register-components": "^1.9.10",
     "push-dir": "^0.4.1",
     "vuepress": "^1.9.10"
   },
