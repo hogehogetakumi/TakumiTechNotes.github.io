@@ -1,18 +1,3 @@
-# おすすめ記事
-
-アウトプット用にIT技術とキャリア関連の記事を掲載しています。
-
-<!-- ## カテゴリ一覧
-
-- [IT技術関連の記事はこちら](./posts/Tech/)
-- [転職・副業関連はこちら](./posts/Job/) -->
-
-<template>
-  <div class="articles">
-    <ArticleCard v-for="(article, index) in $frontmatter.data.articles" :key="index" :article="article" />
-  </div>
-</template>
-
 ---
 data:
   articles:
@@ -30,6 +15,20 @@ data:
       description: "私の最初の投稿です。"
 ---
 
+# おすすめ記事
+
+アウトプット用にIT技術とキャリア関連の記事を掲載しています。
+
+<!-- ## カテゴリ一覧
+
+- [IT技術関連の記事はこちら](./posts/Tech/)
+- [転職・副業関連はこちら](./posts/Job/) -->
+
+<template>
+  <div class="articles">
+    <ArticleCard v-for="(article, index) in $frontmatter.data.articles" :key="index" :article="article" />
+  </div>
+</template>
 
 <style scoped>
 .articles {
