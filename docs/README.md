@@ -3,16 +3,16 @@ permalink: /
 data:
   articles:
     - title: "ライフサイクルフックbeforeCreate編"
-      link: "/posts/Tech/lifecycle_hook/beforeCreate"
+      link: "/TakumiTechNotes.github.io/posts/Tech/lifecycle_hook/beforeCreate"
       description: "継続的インテグレーションについての基礎知識。"
     - title: "ライフサイクルフックcreated編"
-      link: "/posts/Tech/lifecycle_hook/created"
+      link: "/TakumiTechNotes.github.io/posts/Tech/lifecycle_hook/created"
       description: "継続的インテグレーションについての基礎知識。"
     - title: "Options APIとComposition APIの比較"
-      link: "/posts/Tech/options-vs-composition-api"
+      link: "/TakumiTechNotes.github.io/posts/Tech/options-vs-composition-api"
       description: "Vue.jsのOptions APIとComposition APIを比較します。"
     - title: "初めての投稿"
-      link: "/posts/first-post"
+      link: "/TakumiTechNotes.github.ioposts/first-post"
       description: "私の最初の投稿です。"
 ---
 

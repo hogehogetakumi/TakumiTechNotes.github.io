@@ -1,6 +1,4 @@
 // config.js
-const { path } = require('path');
-const { registerComponentsPlugin } = require('@vuepress/plugin-register-components');
 const sidebar = require('./sidebar.js'); // sidebar.jsの読み込み
 
 module.exports = {
