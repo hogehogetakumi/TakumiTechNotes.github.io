@@ -24,10 +24,13 @@ jobs:
     - name: Build VuePress site
       run: npm run docs:build  # VuePressのビルドコマンド.
 
+    - name: Add .nojekyll  # Jekyllを無効化するためのファイルを追加
+      run: touch docs/.vuepress/dist/.nojekyll
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: docs/.vuepress/dist
         publish_branch: gh-pages  # デプロイ先のブランチを指定
-        keep_files: true  # .nojekyllファイルを保持するために追加
+        keep_files: true
