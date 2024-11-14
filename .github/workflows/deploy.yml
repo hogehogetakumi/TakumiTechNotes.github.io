@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Build VuePress site
-      run: npm run docs:build  # VuePressのビルドコマンド
+      run: npm run docs:build  # VuePressのビルドコマンド.
 
     - name: Add .nojekyll
       run: touch docs/.vuepress/dist/.nojekyll
