@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>beforeMount | TechNotes</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Welcome to my blog">
+    
+    <link rel="preload" href="/TakumiTechNotes.github.io/assets/css/0.styles.2b0d0b70.css" as="style"><link rel="preload" href="/TakumiTechNotes.github.io/assets/js/app.8d52a06e.js" as="script"><link rel="preload" href="/TakumiTechNotes.github.io/assets/js/2.f55215a5.js" as="script"><link rel="preload" href="/TakumiTechNotes.github.io/assets/js/1.c29df309.js" as="script"><link rel="preload" href="/TakumiTechNotes.github.io/assets/js/30.e8f5978d.js" as="script"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/11.e45fed0f.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/12.9d601b27.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/13.18f59c98.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/14.2624cbb4.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/15.e445b4cd.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/16.52d28243.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/17.cedfe6e1.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/18.0b0b643c.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/19.90dfced6.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/20.2f78efc4.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/21.7da3bc21.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/22.8202214f.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/23.c292b116.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/24.7a8b809d.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/25.2571fa6c.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/26.db799193.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/27.eb52c730.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/28.7b32aeeb.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/29.7aec39f0.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/3.118e94e1.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/31.e8825e45.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/32.d64a8fc3.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/33.c2417095.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/34.2869b866.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/4.d4a0ef5f.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/5.c70e4d44.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/6.a49ec4fa.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/7.1fcd0d79.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/8.0ebb5a53.js"><link rel="prefetch" href="/TakumiTechNotes.github.io/assets/js/vendors~docsearch.fd489898.js">
+    <link rel="stylesheet" href="/TakumiTechNotes.github.io/assets/css/0.styles.2b0d0b70.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TakumiTechNotes.github.io/" class="home-link router-link-active"><!----> <span class="site-name">TechNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/TakumiTechNotes.github.io/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TakumiTechNotes.github.io/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/TakumiTechNotes.github.io/posts/" class="nav-link router-link-active">
+  Posts
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/TakumiTechNotes.github.io/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TakumiTechNotes.github.io/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/TakumiTechNotes.github.io/posts/" class="nav-link router-link-active">
+  Posts
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/TakumiTechNotes.github.io/posts/Tech/" aria-current="page" class="sidebar-link">sample</a></li><li><a href="/TakumiTechNotes.github.io/posts/Tech/options-vs-composition-api.html" class="sidebar-link">Vue.jsにおけるOptions APIとComposition APIの違い</a></li><li><a href="/TakumiTechNotes.github.io/posts/Tech/lifecycle_hook/beforeCreate.html" class="sidebar-link">beforeCreate</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="beforemount"><a href="#beforemount" class="header-anchor">#</a> beforeMount</h1> <p>beforeMountは、コンポーネントがマウントされる直前に呼び出されるライフサイクルフックです。
+「ん？それじゃあcreatedと何が違うの？」と思ったので、GPTさんに聞いてみました。</p> <h2 id="createdとbeforemountの違い"><a href="#createdとbeforemountの違い" class="header-anchor">#</a> createdとbeforeMountの違い</h2> <table><thead><tr><th>特徴</th> <th>created</th> <th>beforeMount</th></tr></thead> <tbody><tr><td>呼び出しタイミング</td> <td>インスタンス作成後、テンプレートがレンダリングされる前</td> <td>仮想DOMが実際のDOMにリンクされる直前</td></tr> <tr><td>DOMアクセス</td> <td>DOMにアクセスできない</td> <td>$elや$refsでDOM要素にアクセス可能</td></tr> <tr><td>主な用途</td> <td>データの初期化、非同期処理の開始</td> <td>DOMが作成される直前の処理（特殊な場合）</td></tr></tbody></table> <p>らしいです。
+一番の違いはcreatedDOMにアクセスできないが、beforeMountはDOMにアクセスできる点ですね。</p> <h3 id="実際に検証してみよう"><a href="#実際に検証してみよう" class="header-anchor">#</a> 実際に検証してみよう</h3> <p>以下のコードでbeforeMountフックの挙動を確認してみました。</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Hello, Vue.js!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">beforeMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;beforeMountフック: &quot;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// DOMのルート要素にアクセス可能</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;beforeMountフックでrefs: &quot;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefinedになる</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>出力結果</p> <div class="language-bash extra-class"><pre class="language-bash"><code>beforeMountフック:  null
+beforeMountフックでrefs:  undefined
+</code></pre></div><h2 id="検証結果と考察"><a href="#検証結果と考察" class="header-anchor">#</a> 検証結果と考察</h2> <p>beforeMountフックでは、this.$elでDOM要素にアクセスできるはずなのに、nullが返ってきてしまいました。
+this.$refs.titleは想定通りundefindになる</p> <h2 id="考えられる原因"><a href="#考えられる原因" class="header-anchor">#</a> 考えられる原因</h2> <p>実行環境の問題
+今回使用している環境は、ブラウザで簡易的にVueを動かしているだけのもの（CDNなど）。この環境ではbeforeMountの挙動が正しく動作しない可能性があると考えられる。</p> <p>設定ミスやプロジェクト構成の問題
+Vue.jsのバージョンやテンプレート構造に依存して、期待通りに動作しないことも考えられます。</p> <h2 id="まとめ"><a href="#まとめ" class="header-anchor">#</a> まとめ</h2> <p>今回の検証では、beforeMountフックの正しい挙動を確認できませんでしたが、以下のポイントがわかりました：</p> <p>beforeMountフックは仮想DOMが実際のDOMにリンクされる直前に呼び出される
+this.$refsは初期化される前に参照するとundefinedになる
+正しい環境での検証をリベンジします！次回の記事で結果をお届けするので、ぜひお楽しみに。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/TakumiTechNotes.github.io/assets/js/app.8d52a06e.js" defer></script><script src="/TakumiTechNotes.github.io/assets/js/2.f55215a5.js" defer></script><script src="/TakumiTechNotes.github.io/assets/js/1.c29df309.js" defer></script><script src="/TakumiTechNotes.github.io/assets/js/30.e8f5978d.js" defer></script>
+  </body>
+</html>
